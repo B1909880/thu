@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/core/app_export.dart';
+import 'package:test_giao_dien/core/app_export.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton(
-      {this.shape,
-      this.padding,
+      {this.padding,
+      this.shape,
       this.variant,
       this.fontStyle,
       this.alignment,
@@ -16,9 +16,9 @@ class CustomButton extends StatelessWidget {
       this.prefixWidget,
       this.suffixWidget});
 
-  ButtonShape? shape;
-
   ButtonPadding? padding;
+
+  ButtonShape? shape;
 
   ButtonVariant? variant;
 
@@ -56,9 +56,22 @@ class CustomButton extends StatelessWidget {
       child: TextButton(
         onPressed: onTap,
         style: _buildTextButtonStyle(),
-        child: _buildButtonWithOrWithoutIcon(),
+        child: _buildButtonChildWidget(),
       ),
     );
+  }
+
+  _buildButtonChildWidget() {
+    if (checkGradient()) {
+      return Container(
+        width: width ?? double.maxFinite,
+        padding: _setPadding(),
+        decoration: _buildDecoration(),
+        child: _buildButtonWithOrWithoutIcon(),
+      );
+    } else {
+      return _buildButtonWithOrWithoutIcon();
+    }
   }
 
   _buildButtonWithOrWithoutIcon() {
@@ -84,47 +97,95 @@ class CustomButton extends StatelessWidget {
     }
   }
 
-  _buildTextButtonStyle() {
-    return TextButton.styleFrom(
-      fixedSize: Size(
-        width ?? double.maxFinite,
-        height ?? getVerticalSize(40),
-      ),
-      padding: _setPadding(),
-      backgroundColor: _setColor(),
-      shadowColor: _setTextButtonShadowColor(),
-      shape: RoundedRectangleBorder(
-        borderRadius: _setBorderRadius(),
-      ),
+  _buildDecoration() {
+    return BoxDecoration(
+      borderRadius: _setBorderRadius(),
+      gradient: _setGradient(),
+      boxShadow: _setBoxShadow(),
     );
+  }
+
+  _buildTextButtonStyle() {
+    if (checkGradient()) {
+      return TextButton.styleFrom(
+        padding: EdgeInsets.zero,
+      );
+    } else {
+      return TextButton.styleFrom(
+        fixedSize: Size(
+          width ?? double.maxFinite,
+          height ?? getVerticalSize(40),
+        ),
+        padding: _setPadding(),
+        backgroundColor: _setColor(),
+        shadowColor: _setTextButtonShadowColor(),
+        shape: RoundedRectangleBorder(
+          borderRadius: _setBorderRadius(),
+        ),
+      );
+    }
   }
 
   _setPadding() {
     switch (padding) {
-      case ButtonPadding.PaddingT2:
+      case ButtonPadding.PaddingT28:
         return getPadding(
-          top: 2,
-          bottom: 2,
+          top: 28,
+          right: 28,
+          bottom: 28,
         );
-      case ButtonPadding.PaddingAll13:
+      case ButtonPadding.PaddingT47:
         return getPadding(
-          all: 13,
+          top: 47,
+          right: 47,
+          bottom: 47,
         );
-      case ButtonPadding.PaddingT5:
+      case ButtonPadding.PaddingT47_1:
         return getPadding(
-          top: 5,
-          right: 5,
-          bottom: 5,
+          left: 21,
+          top: 47,
+          right: 21,
+          bottom: 47,
         );
-      case ButtonPadding.PaddingT11:
+      case ButtonPadding.PaddingT47_2:
         return getPadding(
-          top: 11,
-          right: 11,
-          bottom: 11,
+          top: 47,
+          right: 42,
+          bottom: 47,
+        );
+      case ButtonPadding.PaddingAll11:
+        return getPadding(
+          all: 11,
+        );
+      case ButtonPadding.PaddingT15:
+        return getPadding(
+          left: 11,
+          top: 15,
+          bottom: 15,
+        );
+      case ButtonPadding.PaddingT13:
+        return getPadding(
+          top: 13,
+          right: 13,
+          bottom: 13,
+        );
+      case ButtonPadding.PaddingT18:
+        return getPadding(
+          top: 18,
+          right: 18,
+          bottom: 18,
+        );
+      case ButtonPadding.PaddingT16:
+        return getPadding(
+          left: 13,
+          top: 16,
+          right: 13,
+          bottom: 16,
         );
       default:
         return getPadding(
-          all: 9,
+          top: 7,
+          bottom: 7,
         );
     }
   }
@@ -132,15 +193,13 @@ class CustomButton extends StatelessWidget {
   _setColor() {
     switch (variant) {
       case ButtonVariant.OutlineBlack9003f:
-        return ColorConstant.green400;
+        return ColorConstant.green800;
       case ButtonVariant.OutlineBlack9003f_1:
-        return ColorConstant.lightGreenA700;
+        return ColorConstant.green800;
       case ButtonVariant.OutlineBlack9003f_2:
-        return ColorConstant.green800;
-      case ButtonVariant.OutlineBlack9003f_3:
-        return ColorConstant.green800;
-      case ButtonVariant.OutlineBlack9003f_4:
-        return ColorConstant.green800;
+        return ColorConstant.green400;
+      case ButtonVariant.Outline:
+        return null;
       default:
         return ColorConstant.green400;
     }
@@ -148,15 +207,13 @@ class CustomButton extends StatelessWidget {
 
   _setTextButtonShadowColor() {
     switch (variant) {
+      case ButtonVariant.Outline:
+        return ColorConstant.whiteA700;
       case ButtonVariant.OutlineBlack9003f:
         return ColorConstant.black9003f;
       case ButtonVariant.OutlineBlack9003f_1:
         return ColorConstant.black9003f;
       case ButtonVariant.OutlineBlack9003f_2:
-        return ColorConstant.black9003f;
-      case ButtonVariant.OutlineBlack9003f_3:
-        return ColorConstant.black9003f;
-      case ButtonVariant.OutlineBlack9003f_4:
         return ColorConstant.black9003f;
       case ButtonVariant.FillGreen400:
         return null;
@@ -167,16 +224,16 @@ class CustomButton extends StatelessWidget {
 
   _setBorderRadius() {
     switch (shape) {
-      case ButtonShape.RoundedBorder20:
-        return BorderRadius.circular(
-          getHorizontalSize(
-            20.00,
-          ),
-        );
       case ButtonShape.RoundedBorder15:
         return BorderRadius.circular(
           getHorizontalSize(
             15.00,
+          ),
+        );
+      case ButtonShape.RoundedBorder20:
+        return BorderRadius.circular(
+          getHorizontalSize(
+            20.00,
           ),
         );
       case ButtonShape.Square:
@@ -192,14 +249,41 @@ class CustomButton extends StatelessWidget {
 
   _setFontStyle() {
     switch (fontStyle) {
-      case ButtonFontStyle.InterRegular14:
+      case ButtonFontStyle.InterRegular20:
         return TextStyle(
-          color: ColorConstant.black900,
+          color: ColorConstant.whiteA700,
           fontSize: getFontSize(
-            14,
+            20,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
+        );
+      case ButtonFontStyle.InterBold16:
+        return TextStyle(
+          color: ColorConstant.black900,
+          fontSize: getFontSize(
+            16,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w700,
+        );
+      case ButtonFontStyle.InterBold20:
+        return TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: getFontSize(
+            20,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w700,
+        );
+      case ButtonFontStyle.InterBold18:
+        return TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: getFontSize(
+            18,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w700,
         );
       case ButtonFontStyle.InterRegular12:
         return TextStyle(
@@ -210,65 +294,171 @@ class CustomButton extends StatelessWidget {
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         );
-      case ButtonFontStyle.InterBold16:
+      case ButtonFontStyle.InterRegular18:
         return TextStyle(
-          color: ColorConstant.whiteA700,
+          color: ColorConstant.black900,
           fontSize: getFontSize(
-            16,
+            18,
           ),
           fontFamily: 'Inter',
-          fontWeight: FontWeight.w700,
-        );
-      case ButtonFontStyle.InterBold16Bluegray100:
-        return TextStyle(
-          color: ColorConstant.blueGray100,
-          fontSize: getFontSize(
-            16,
-          ),
-          fontFamily: 'Inter',
-          fontWeight: FontWeight.w700,
+          fontWeight: FontWeight.w400,
         );
       default:
         return TextStyle(
           color: ColorConstant.black900,
           fontSize: getFontSize(
-            11,
+            20,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         );
     }
   }
+
+  checkGradient() {
+    switch (variant) {
+      case ButtonVariant.Outline:
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  _setGradient() {
+    switch (variant) {
+      case ButtonVariant.Outline:
+        return LinearGradient(
+          begin: Alignment(
+            0.5,
+            0,
+          ),
+          end: Alignment(
+            0.5,
+            1,
+          ),
+          colors: [
+            ColorConstant.whiteA700,
+            ColorConstant.green400,
+          ],
+        );
+      case ButtonVariant.FillGreen400:
+      case ButtonVariant.OutlineBlack9003f:
+      case ButtonVariant.OutlineBlack9003f_1:
+      case ButtonVariant.OutlineBlack9003f_2:
+        return null;
+      default:
+        return null;
+    }
+  }
+
+  _setBoxShadow() {
+    switch (variant) {
+      case ButtonVariant.Outline:
+        return [
+          BoxShadow(
+            color: ColorConstant.whiteA700,
+            spreadRadius: getHorizontalSize(
+              2.00,
+            ),
+            blurRadius: getHorizontalSize(
+              2.00,
+            ),
+            offset: Offset(
+              0,
+              3,
+            ),
+          ),
+        ];
+      case ButtonVariant.OutlineBlack9003f:
+        return [
+          BoxShadow(
+            color: ColorConstant.black9003f,
+            spreadRadius: getHorizontalSize(
+              2.00,
+            ),
+            blurRadius: getHorizontalSize(
+              2.00,
+            ),
+            offset: Offset(
+              0,
+              4,
+            ),
+          ),
+        ];
+      case ButtonVariant.OutlineBlack9003f_1:
+        return [
+          BoxShadow(
+            color: ColorConstant.black9003f,
+            spreadRadius: getHorizontalSize(
+              2.00,
+            ),
+            blurRadius: getHorizontalSize(
+              2.00,
+            ),
+            offset: Offset(
+              0,
+              0,
+            ),
+          ),
+        ];
+      case ButtonVariant.OutlineBlack9003f_2:
+        return [
+          BoxShadow(
+            color: ColorConstant.black9003f,
+            spreadRadius: getHorizontalSize(
+              2.00,
+            ),
+            blurRadius: getHorizontalSize(
+              2.00,
+            ),
+            offset: Offset(
+              0,
+              4,
+            ),
+          ),
+        ];
+      case ButtonVariant.FillGreen400:
+        return null;
+      default:
+        return null;
+    }
+  }
+}
+
+enum ButtonPadding {
+  PaddingT28,
+  PaddingT47,
+  PaddingT47_1,
+  PaddingT47_2,
+  PaddingT7,
+  PaddingAll11,
+  PaddingT15,
+  PaddingT13,
+  PaddingT18,
+  PaddingT16,
 }
 
 enum ButtonShape {
   Square,
-  RoundedBorder10,
-  RoundedBorder20,
   RoundedBorder15,
-}
-
-enum ButtonPadding {
-  PaddingAll9,
-  PaddingT2,
-  PaddingAll13,
-  PaddingT5,
-  PaddingT11,
+  RoundedBorder20,
+  RoundedBorder10,
 }
 
 enum ButtonVariant {
   FillGreen400,
+  Outline,
   OutlineBlack9003f,
   OutlineBlack9003f_1,
   OutlineBlack9003f_2,
-  OutlineBlack9003f_3,
-  OutlineBlack9003f_4,
 }
 
 enum ButtonFontStyle {
-  InterRegular11,
-  InterRegular14,
-  InterRegular12,
+  InterRegular20Black900,
+  InterRegular20,
   InterBold16,
-  InterBold16Bluegray100,
+  InterBold20,
+  InterBold18,
+  InterRegular12,
+  InterRegular18,
 }

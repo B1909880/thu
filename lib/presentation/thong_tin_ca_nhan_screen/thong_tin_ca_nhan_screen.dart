@@ -1,11 +1,12 @@
 import 'controller/thong_tin_ca_nhan_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/core/app_export.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/widgets/app_bar/appbar_image.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/widgets/app_bar/appbar_title.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/widgets/app_bar/custom_app_bar.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/widgets/custom_bottom_bar.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/widgets/custom_button.dart';
+import 'package:test_giao_dien/core/app_export.dart';
+import 'package:test_giao_dien/presentation/dien_dan_page/dien_dan_page.dart';
+import 'package:test_giao_dien/widgets/app_bar/appbar_image.dart';
+import 'package:test_giao_dien/widgets/app_bar/appbar_title.dart';
+import 'package:test_giao_dien/widgets/app_bar/custom_app_bar.dart';
+import 'package:test_giao_dien/widgets/custom_bottom_bar.dart';
+import 'package:test_giao_dien/widgets/custom_button.dart';
 
 class ThongTinCaNhanScreen extends GetWidget<ThongTinCaNhanController> {
   @override
@@ -24,33 +25,32 @@ class ThongTinCaNhanScreen extends GetWidget<ThongTinCaNhanController> {
                               padding: getPadding(top: 11, bottom: 11),
                               decoration: AppDecoration.fillGreen400.copyWith(
                                   borderRadius:
-                                      BorderRadiusStyle.customBorderBL60),
+                                      BorderRadiusStyle.customBorderBR30),
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     CustomAppBar(
-                                        height: getVerticalSize(35),
-                                        leadingWidth: 44,
+                                        height: getVerticalSize(47),
+                                        leadingWidth: 59,
                                         leading: AppbarImage(
-                                            height: getSize(25),
-                                            width: getSize(25),
+                                            height: getSize(40),
+                                            width: getSize(40),
                                             svgPath: ImageConstant.imgArrowleft,
-                                            margin: getMargin(left: 19, top: 5),
+                                            margin: getMargin(left: 19),
                                             onTap: () {
-                                              onTapArrowleft9();
+
+                                              onTapHome();
                                             }),
                                         centerTitle: true,
                                         title: AppbarTitle(
                                             text: "msg_th_ng_tin_c_nh_n".tr)),
                                     Padding(
                                         padding: getPadding(
-                                            left: 51, top: 14, right: 54),
+                                            left: 35, top: 2, right: 31),
                                         child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.end,
                                             children: [
                                               CustomImageView(
                                                   imagePath:
@@ -61,48 +61,48 @@ class ThongTinCaNhanScreen extends GetWidget<ThongTinCaNhanController> {
                                                       getHorizontalSize(50))),
                                               Padding(
                                                   padding: getPadding(
-                                                      left: 10,
-                                                      top: 43,
-                                                      bottom: 36),
+                                                      left: 17,
+                                                      top: 36,
+                                                      bottom: 38),
                                                   child: Text(
                                                       "lbl_nguy_n_v_n_a".tr,
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: AppStyle
-                                                          .txtInterRegular16)),
+                                                          .txtInterRegular20)),
                                               CustomImageView(
                                                   svgPath:
-                                                      ImageConstant.imgShare,
-                                                  height: getSize(24),
-                                                  width: getSize(24),
+                                                      ImageConstant.imgEdit,
+                                                  height: getSize(40),
+                                                  width: getSize(40),
                                                   margin: getMargin(
-                                                      left: 14,
-                                                      top: 43,
-                                                      bottom: 33),
+                                                      left: 33,
+                                                      top: 25,
+                                                      bottom: 35),
                                                   onTap: () {
-                                                    onTapImgShare();
+                                                    onTapImgEdit();
                                                   })
                                             ]))
                                   ]))),
                       Container(
                           padding: getPadding(
-                              left: 45, top: 10, right: 45, bottom: 10),
+                              left: 17, top: 29, right: 17, bottom: 29),
                           child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Container(
                                     width: double.maxFinite,
                                     child: Container(
-                                        width: getHorizontalSize(269),
-                                        margin: getMargin(left: 1),
+                                        width: getHorizontalSize(353),
                                         padding: getPadding(
-                                            left: 10,
-                                            top: 14,
-                                            right: 10,
-                                            bottom: 14),
+                                            left: 18,
+                                            top: 11,
+                                            right: 18,
+                                            bottom: 11),
                                         decoration: AppDecoration
-                                            .outlineBlack9003f3
+                                            .outlineBlack9003f1
                                             .copyWith(
                                                 borderRadius: BorderRadiusStyle
                                                     .roundedBorder20),
@@ -114,94 +114,89 @@ class ThongTinCaNhanScreen extends GetWidget<ThongTinCaNhanController> {
                                                 MainAxisAlignment.start,
                                             children: [
                                               Container(
-                                                  width: getHorizontalSize(234),
+                                                  width: getHorizontalSize(293),
                                                   margin: getMargin(
-                                                      right: 14, bottom: 5),
+                                                      right: 23, bottom: 25),
                                                   child: Text(
                                                       "msg_th_ng_tin_chi_ti_t_nguy_n"
                                                           .tr,
                                                       maxLines: null,
                                                       textAlign: TextAlign.left,
                                                       style: AppStyle
-                                                          .txtInterRegular16))
+                                                          .txtInterRegular20))
                                             ]))),
                                 Container(
-                                    margin: getMargin(left: 1, top: 23),
+                                    margin: getMargin(top: 30, right: 3),
                                     padding: getPadding(
-                                        left: 31,
+                                        left: 18,
                                         top: 15,
-                                        right: 31,
+                                        right: 18,
                                         bottom: 15),
-                                    decoration: AppDecoration.outlineBlack9003f3
+                                    decoration: AppDecoration.outlineBlack9003f1
                                         .copyWith(
                                             borderRadius: BorderRadiusStyle
                                                 .roundedBorder20),
                                     child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           CustomImageView(
                                               svgPath: ImageConstant.imgVolume,
-                                              height: getSize(24),
-                                              width: getSize(24),
-                                              margin: getMargin(bottom: 1)),
+                                              height: getVerticalSize(47),
+                                              width: getHorizontalSize(40),
+                                              margin: getMargin(top: 1)),
                                           Padding(
                                               padding: getPadding(
-                                                  top: 3, right: 19, bottom: 1),
+                                                  left: 44, top: 7, bottom: 16),
                                               child: Text(
                                                   "msg_i_u_kho_n_d_ch".tr,
                                                   overflow:
                                                       TextOverflow.ellipsis,
                                                   textAlign: TextAlign.left,
                                                   style: AppStyle
-                                                      .txtInterRegular16))
+                                                      .txtInterRegular20))
                                         ])),
                                 Container(
-                                    margin: getMargin(left: 1, top: 24),
-                                    padding: getPadding(
-                                        left: 31,
-                                        top: 10,
-                                        right: 31,
-                                        bottom: 10),
-                                    decoration: AppDecoration.outlineBlack9003f3
+                                    margin: getMargin(top: 35, right: 3),
+                                    padding: getPadding(top: 15, bottom: 15),
+                                    decoration: AppDecoration.outlineBlack9003f1
                                         .copyWith(
                                             borderRadius: BorderRadiusStyle
                                                 .roundedBorder20),
                                     child: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceAround,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
                                           CustomImageView(
                                               svgPath: ImageConstant.imgMusic,
-                                              height: getSize(24),
-                                              width: getSize(24),
-                                              margin: getMargin(bottom: 11)),
+                                              height: getVerticalSize(47),
+                                              width: getHorizontalSize(40),
+                                              margin: getMargin(top: 1)),
                                           Padding(
                                               padding: getPadding(
-                                                  top: 4,
-                                                  right: 12,
-                                                  bottom: 10),
+                                                  top: 8, bottom: 15),
                                               child: Text(
                                                   "msg_ch_nh_s_ch_b_o_m_t".tr,
                                                   overflow:
                                                       TextOverflow.ellipsis,
                                                   textAlign: TextAlign.left,
                                                   style: AppStyle
-                                                      .txtInterRegular16))
+                                                      .txtInterRegular20))
                                         ])),
                                 CustomButton(
-                                    height: getVerticalSize(31),
-                                    width: getHorizontalSize(141),
+                                    height: getVerticalSize(55),
+                                    width: getHorizontalSize(165),
                                     text: "lbl_ng_xu_t".tr,
-                                    margin: getMargin(top: 37, bottom: 5),
-                                    variant: ButtonVariant.OutlineBlack9003f_2,
-                                    shape: ButtonShape.RoundedBorder15,
-                                    padding: ButtonPadding.PaddingT5,
-                                    fontStyle: ButtonFontStyle.InterBold16,
-                                    prefixWidget: Container(
-                                        margin: getMargin(right: 12),
+                                    margin:
+                                        getMargin(left: 79, top: 43, bottom: 5),
+                                    variant: ButtonVariant.OutlineBlack9003f,
+                                    shape: ButtonShape.RoundedBorder20,
+                                    padding: ButtonPadding.PaddingT15,
+                                    fontStyle: ButtonFontStyle.InterBold20,
+                                    suffixWidget: Container(
+                                        margin: getMargin(left: 4),
                                         decoration: BoxDecoration(
                                             color: ColorConstant.whiteA700),
                                         child: CustomImageView(
@@ -212,14 +207,49 @@ class ThongTinCaNhanScreen extends GetWidget<ThongTinCaNhanController> {
                               ]))
                     ])),
             bottomNavigationBar:
-                CustomBottomBar(onChanged: (BottomBarEnum type) {})));
+                CustomBottomBar(onChanged: (BottomBarEnum type) {
+              Get.toNamed(getCurrentRoute(type), id: 1);
+            })));
   }
 
-  onTapArrowleft9() {
+  ///Handling route based on bottom click actions
+  String getCurrentRoute(BottomBarEnum type) {
+    switch (type) {
+      case BottomBarEnum.Home:
+        return AppRoutes.dienDanPage;
+      case BottomBarEnum.Calendar:
+        return "/";
+      case BottomBarEnum.Monitoring:
+        return "/";
+      case BottomBarEnum.Notification:
+        return "/";
+      case BottomBarEnum.Settings:
+        return "/";
+      default:
+        return "/";
+    }
+  }
+
+  ///Handling page based on route
+  Widget getCurrentPage(String currentRoute) {
+    switch (currentRoute) {
+      case AppRoutes.dienDanPage:
+        return DienDanPage();
+      default:
+        return DefaultWidget();
+    }
+  }
+
+  onTapArrowleft() {
     Get.back();
   }
+  onTapHome(){
+    Get.toNamed(
+      AppRoutes.trangChuScreen,
+    );
+  }
 
-  onTapImgShare() {
+  onTapImgEdit() {
     Get.toNamed(
       AppRoutes.capNhatThongTinScreen,
     );
@@ -227,7 +257,7 @@ class ThongTinCaNhanScreen extends GetWidget<ThongTinCaNhanController> {
 
   onTapNgxut() {
     Get.toNamed(
-      AppRoutes.loginScreen,
+      AppRoutes.dangNhapScreen,
     );
   }
 }

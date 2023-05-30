@@ -1,4 +1,4 @@
-name: tran_thuy_ai_b1909880_s_application9
+name: test_giao_dien
 description: A new Flutter project.
 version: 1.0.0+1
 environment: 
@@ -11,6 +11,7 @@ dependencies:
   shared_preferences: ^2.0.15
   cached_network_image: ^3.2.1
   flutter_svg: ^1.1.6
+  outline_gradient_button: ^2.0.0+1
   intl: ^0.17.0
 dev_dependencies: 
   flutter_test: 

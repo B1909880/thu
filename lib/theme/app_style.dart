@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/core/app_export.dart';
+import 'package:test_giao_dien/core/app_export.dart';
 
 class AppStyle {
-  static TextStyle txtInterRegular14Black900 = TextStyle(
+  static TextStyle txtInterBold18 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
-      14,
+      18,
     ),
     fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w700,
   );
 
   static TextStyle txtInterRegular20 = TextStyle(
@@ -20,19 +20,46 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle txtInterRegular12WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
+  static TextStyle txtInterBold25 = TextStyle(
+    color: ColorConstant.black900,
     fontSize: getFontSize(
-      12,
+      25,
     ),
     fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w700,
   );
 
   static TextStyle txtInterBold16 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
       16,
+    ),
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle txtInterRegular25Green800 = TextStyle(
+    color: ColorConstant.green800,
+    fontSize: getFontSize(
+      25,
+    ),
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle txtInterRegular16Black9001 = TextStyle(
+    color: ColorConstant.black900,
+    fontSize: getFontSize(
+      16,
+    ),
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle txtInterBold18Bluegray100 = TextStyle(
+    color: ColorConstant.blueGray100,
+    fontSize: getFontSize(
+      18,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w700,
@@ -56,28 +83,19 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle txtInterRegular14WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
+  static TextStyle txtInterRegular16Black900 = TextStyle(
+    color: ColorConstant.black900,
     fontSize: getFontSize(
-      14,
+      16,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle txtInterRegular11 = TextStyle(
+  static TextStyle txtInterRegular13 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
-      11,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtInterRegular12 = TextStyle(
-    color: ColorConstant.black900,
-    fontSize: getFontSize(
-      12,
+      13,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w400,
@@ -92,8 +110,17 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
+  static TextStyle txtInterRegular36 = TextStyle(
+    color: ColorConstant.black900,
+    fontSize: getFontSize(
+      36,
+    ),
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400,
+  );
+
   static TextStyle txtInterRegular25 = TextStyle(
-    color: ColorConstant.green800,
+    color: ColorConstant.black900,
     fontSize: getFontSize(
       25,
     ),
@@ -102,7 +129,7 @@ class AppStyle {
   );
 
   static TextStyle txtInterRegular16 = TextStyle(
-    color: ColorConstant.black900,
+    color: ColorConstant.green400,
     fontSize: getFontSize(
       16,
     ),
@@ -119,10 +146,10 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle txtInterRegular17 = TextStyle(
+  static TextStyle txtInterRegular18 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
-      17,
+      18,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w400,

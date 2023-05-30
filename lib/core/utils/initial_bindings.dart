@@ -1,5 +1,5 @@
-import 'package:tran_thuy_ai_b1909880_s_application9/core/app_export.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/data/apiClient/api_client.dart';
+import 'package:test_giao_dien/core/app_export.dart';
+import 'package:test_giao_dien/data/apiClient/api_client.dart';
 
 class InitialBindings extends Bindings {
   @override

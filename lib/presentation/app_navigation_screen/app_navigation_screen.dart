@@ -1,6 +1,6 @@
 import 'controller/app_navigation_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/core/app_export.dart';
+import 'package:test_giao_dien/core/app_export.dart';
 
 class AppNavigationScreen extends GetWidget<AppNavigationController> {
   @override
@@ -57,7 +57,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                       children: [
                                         GestureDetector(
                                             onTap: () {
-                                              onTapThongke();
+                                              onTapThongbao();
                                             },
                                             child: Container(
                                                 decoration:
@@ -78,7 +78,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_thong_ke"
+                                                                  "lbl_thong_bao"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -103,7 +103,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapLichtheodoi();
+                                              onTapDangky();
                                             },
                                             child: Container(
                                                 decoration:
@@ -124,7 +124,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_lich_theo_doi"
+                                                                  "lbl_dang_ky"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -149,7 +149,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapCanhtac();
+                                              onTapDangnhap();
                                             },
                                             child: Container(
                                                 decoration:
@@ -170,375 +170,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_canh_tac"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapCanhtacthem();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_canh_tac_them"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapCanhtacchitiet();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "msg_canh_tac_chi_tiet"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapVietnhatki();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_viet_nhat_ki"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapNhatki();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_nhat_ki"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapNhatkichitiet();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "msg_nhat_ki_chi_tiet"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapLogin();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_login"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapSignUp();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_signup"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20))),
-                                                      Padding(
-                                                          padding: getPadding(
-                                                              top: 5),
-                                                          child: Divider(
-                                                              height:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              thickness:
-                                                                  getVerticalSize(
-                                                                      1),
-                                                              color: ColorConstant
-                                                                  .blueGray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapCapnhatthongtin();
-                                            },
-                                            child: Container(
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "msg_cap_nhat_thong_tin"
+                                                                  "lbl_dang_nhap"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -609,7 +241,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapHome();
+                                              onTapCapnhatthongtin();
                                             },
                                             child: Container(
                                                 decoration:
@@ -630,7 +262,8 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_home".tr,
+                                                                  "msg_cap_nhat_thong_tin"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -654,7 +287,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapSearch();
+                                              onTapTrangchu();
                                             },
                                             child: Container(
                                                 decoration:
@@ -675,7 +308,53 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_search"
+                                                                  "lbl_trang_chu"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapTimkiem();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_tim_kiem"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -792,7 +471,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapTimkiemgiaban();
+                                              onTapTimkiemgiathumua();
                                             },
                                             child: Container(
                                                 decoration:
@@ -813,7 +492,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "msg_tim_kiem_gia_ban"
+                                                                  "msg_tim_kiem_gia_thu_mua"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -838,7 +517,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapTimkiemHDnuoitrong();
+                                              onTapTimkiemhuongdannuoitrong();
                                             },
                                             child: Container(
                                                 decoration:
@@ -859,7 +538,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "msg_tim_kiem_hd_nuoi_trong"
+                                                                  "msg_tim_kiem_huong_dan_nuoitrong"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -884,7 +563,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapDiendan();
+                                              onTapThongke();
                                             },
                                             child: Container(
                                                 decoration:
@@ -905,7 +584,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_dien_dan"
+                                                                  "lbl_thong_ke"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -930,7 +609,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapChitiettd();
+                                              onTapLichtheodoi();
                                             },
                                             child: Container(
                                                 decoration:
@@ -951,7 +630,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_chi_tiet_td"
+                                                                  "lbl_lich_theo_doi"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -976,7 +655,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapThemtt();
+                                              onTapDiendanContainer();
                                             },
                                             child: Container(
                                                 decoration:
@@ -997,7 +676,421 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_them_tt"
+                                                                  "msg_dien_dan_container"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapChitiettintuc();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "msg_chi_tiet_tin_tuc"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapThemtintuc();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_them_tin_tuc"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapLichsubaidang();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "msg_lich_su_bai_dang"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapCanhtac();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_canh_tac"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapThemcanhtac();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_them_canh_tac"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapHuongdancanhtac();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "msg_huong_dan_canh_tac"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapVietnhatky();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_viet_nhat_ky"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapNhatky();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_nhat_ky"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20))),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              top: 5),
+                                                          child: Divider(
+                                                              height:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              thickness:
+                                                                  getVerticalSize(
+                                                                      1),
+                                                              color: ColorConstant
+                                                                  .blueGray400))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapChitietnhatky();
+                                            },
+                                            child: Container(
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "msg_chi_tiet_nhat_ky"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -1024,69 +1117,21 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                     ]))));
   }
 
-  onTapThongke() {
+  onTapThongbao() {
     Get.toNamed(
-      AppRoutes.thongKeScreen,
+      AppRoutes.thongBaoScreen,
     );
   }
 
-  onTapLichtheodoi() {
+  onTapDangky() {
     Get.toNamed(
-      AppRoutes.lichTheoDoiScreen,
+      AppRoutes.dangKyScreen,
     );
   }
 
-  onTapCanhtac() {
+  onTapDangnhap() {
     Get.toNamed(
-      AppRoutes.canhTacScreen,
-    );
-  }
-
-  onTapCanhtacthem() {
-    Get.toNamed(
-      AppRoutes.canhTacThemScreen,
-    );
-  }
-
-  onTapCanhtacchitiet() {
-    Get.toNamed(
-      AppRoutes.canhTacChiTietScreen,
-    );
-  }
-
-  onTapVietnhatki() {
-    Get.toNamed(
-      AppRoutes.vietNhatKiScreen,
-    );
-  }
-
-  onTapNhatki() {
-    Get.toNamed(
-      AppRoutes.nhatKiScreen,
-    );
-  }
-
-  onTapNhatkichitiet() {
-    Get.toNamed(
-      AppRoutes.nhatKiChiTietScreen,
-    );
-  }
-
-  onTapLogin() {
-    Get.toNamed(
-      AppRoutes.loginScreen,
-    );
-  }
-
-  onTapSignUp() {
-    Get.toNamed(
-      AppRoutes.signupScreen,
-    );
-  }
-
-  onTapCapnhatthongtin() {
-    Get.toNamed(
-      AppRoutes.capNhatThongTinScreen,
+      AppRoutes.dangNhapScreen,
     );
   }
 
@@ -1096,15 +1141,21 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
     );
   }
 
-  onTapHome() {
+  onTapCapnhatthongtin() {
     Get.toNamed(
-      AppRoutes.homeScreen,
+      AppRoutes.capNhatThongTinScreen,
     );
   }
 
-  onTapSearch() {
+  onTapTrangchu() {
     Get.toNamed(
-      AppRoutes.searchScreen,
+      AppRoutes.trangChuScreen,
+    );
+  }
+
+  onTapTimkiem() {
+    Get.toNamed(
+      AppRoutes.timKiemScreen,
     );
   }
 
@@ -1120,33 +1171,87 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
     );
   }
 
-  onTapTimkiemgiaban() {
+  onTapTimkiemgiathumua() {
     Get.toNamed(
-      AppRoutes.timKiemGiaBanScreen,
+      AppRoutes.timKiemGiaThuMuaScreen,
     );
   }
 
-  onTapTimkiemHDnuoitrong() {
+  onTapTimkiemhuongdannuoitrong() {
     Get.toNamed(
-      AppRoutes.timKiemHdNuoiTrongScreen,
+      AppRoutes.timKiemHuongDanNuoitrongScreen,
     );
   }
 
-  onTapDiendan() {
+  onTapThongke() {
     Get.toNamed(
-      AppRoutes.dienDanScreen,
+      AppRoutes.thongKeScreen,
     );
   }
 
-  onTapChitiettd() {
+  onTapLichtheodoi() {
     Get.toNamed(
-      AppRoutes.chiTietTdScreen,
+      AppRoutes.lichTheoDoiScreen,
     );
   }
 
-  onTapThemtt() {
+  onTapDiendanContainer() {
     Get.toNamed(
-      AppRoutes.themTtScreen,
+      AppRoutes.dienDanContainerScreen,
+    );
+  }
+
+  onTapChitiettintuc() {
+    Get.toNamed(
+      AppRoutes.chiTietTinTucScreen,
+    );
+  }
+
+  onTapThemtintuc() {
+    Get.toNamed(
+      AppRoutes.themTinTucScreen,
+    );
+  }
+
+  onTapLichsubaidang() {
+    Get.toNamed(
+      AppRoutes.lichSuBaiDangScreen,
+    );
+  }
+
+  onTapCanhtac() {
+    Get.toNamed(
+      AppRoutes.canhTacScreen,
+    );
+  }
+
+  onTapThemcanhtac() {
+    Get.toNamed(
+      AppRoutes.themCanhTacScreen,
+    );
+  }
+
+  onTapHuongdancanhtac() {
+    Get.toNamed(
+      AppRoutes.huongDanCanhTacScreen,
+    );
+  }
+
+  onTapVietnhatky() {
+    Get.toNamed(
+      AppRoutes.vietNhatKyScreen,
+    );
+  }
+
+  onTapNhatky() {
+    Get.toNamed(
+      AppRoutes.nhatKyScreen,
+    );
+  }
+
+  onTapChitietnhatky() {
+    Get.toNamed(
+      AppRoutes.chiTietNhatKyScreen,
     );
   }
 }

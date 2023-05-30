@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/core/app_export.dart';
+import 'package:test_giao_dien/core/app_export.dart';
 
 class CustomBottomBar extends StatelessWidget {
   CustomBottomBar({this.onChanged});
@@ -20,6 +20,10 @@ class CustomBottomBar extends StatelessWidget {
       type: BottomBarEnum.Monitoring,
     ),
     BottomMenuModel(
+      icon: ImageConstant.imgNotification,
+      type: BottomBarEnum.Notification,
+    ),
+    BottomMenuModel(
       icon: ImageConstant.imgSettings,
       type: BottomBarEnum.Settings,
     )
@@ -35,12 +39,12 @@ class CustomBottomBar extends StatelessWidget {
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(
             getHorizontalSize(
-              10,
+              20,
             ),
           ),
           topRight: Radius.circular(
             getHorizontalSize(
-              10,
+              20,
             ),
           ),
         ),
@@ -50,21 +54,6 @@ class CustomBottomBar extends StatelessWidget {
             1,
           ),
         ),
-        boxShadow: [
-          BoxShadow(
-            color: ColorConstant.black9003f,
-            spreadRadius: getHorizontalSize(
-              2,
-            ),
-            blurRadius: getHorizontalSize(
-              2,
-            ),
-            offset: Offset(
-              0,
-              4,
-            ),
-          ),
-        ],
       ),
       child: Obx(
         () => BottomNavigationBar(
@@ -79,20 +68,20 @@ class CustomBottomBar extends StatelessWidget {
               icon: CustomImageView(
                 svgPath: bottomMenuList[index].icon,
                 height: getSize(
-                  40,
+                  50,
                 ),
                 width: getSize(
-                  40,
+                  50,
                 ),
                 color: ColorConstant.whiteA700,
               ),
               activeIcon: CustomImageView(
                 svgPath: bottomMenuList[index].icon,
                 height: getSize(
-                  40,
+                  50,
                 ),
                 width: getSize(
-                  40,
+                  50,
                 ),
                 color: ColorConstant.whiteA700,
               ),
@@ -113,6 +102,7 @@ enum BottomBarEnum {
   Home,
   Calendar,
   Monitoring,
+  Notification,
   Settings,
 }
 

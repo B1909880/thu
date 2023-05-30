@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tran_thuy_ai_b1909880_s_application9/core/app_export.dart';
+import 'package:test_giao_dien/core/app_export.dart';
 
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField(
@@ -114,20 +114,20 @@ class CustomTextFormField extends StatelessWidget {
 
   _setFontStyle() {
     switch (fontStyle) {
-      case TextFormFieldFontStyle.InterRegular17:
+      case TextFormFieldFontStyle.InterBold18:
         return TextStyle(
           color: ColorConstant.black900,
           fontSize: getFontSize(
-            17,
+            18,
           ),
           fontFamily: 'Inter',
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w700,
         );
       default:
         return TextStyle(
           color: ColorConstant.black900,
           fontSize: getFontSize(
-            16,
+            10,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
@@ -143,12 +143,6 @@ class CustomTextFormField extends StatelessWidget {
             15.00,
           ),
         );
-      case TextFormFieldShape.RoundedBorder20:
-        return BorderRadius.circular(
-          getHorizontalSize(
-            20.00,
-          ),
-        );
       default:
         return BorderRadius.circular(
           getHorizontalSize(
@@ -160,16 +154,6 @@ class CustomTextFormField extends StatelessWidget {
 
   _setBorderStyle() {
     switch (variant) {
-      case TextFormFieldVariant.OutlineBlack9003f:
-        return OutlineInputBorder(
-          borderRadius: _setOutlineBorderRadius(),
-          borderSide: BorderSide.none,
-        );
-      case TextFormFieldVariant.OutlineBlack9007f:
-        return OutlineInputBorder(
-          borderRadius: _setOutlineBorderRadius(),
-          borderSide: BorderSide.none,
-        );
       case TextFormFieldVariant.None:
         return InputBorder.none;
       default:
@@ -182,21 +166,13 @@ class CustomTextFormField extends StatelessWidget {
 
   _setFillColor() {
     switch (variant) {
-      case TextFormFieldVariant.OutlineBlack9003f:
-        return ColorConstant.whiteA700;
-      case TextFormFieldVariant.OutlineBlack9007f:
-        return ColorConstant.whiteA700;
       default:
-        return ColorConstant.blueGray100;
+        return ColorConstant.green50;
     }
   }
 
   _setFilled() {
     switch (variant) {
-      case TextFormFieldVariant.OutlineBlack9003f:
-        return true;
-      case TextFormFieldVariant.OutlineBlack9007f:
-        return true;
       case TextFormFieldVariant.None:
         return false;
       default:
@@ -206,43 +182,48 @@ class CustomTextFormField extends StatelessWidget {
 
   _setPadding() {
     switch (padding) {
-      case TextFormFieldPadding.PaddingT180:
+      case TextFormFieldPadding.PaddingT24:
         return getPadding(
-          left: 13,
-          top: 180,
-          right: 13,
-          bottom: 180,
+          left: 14,
+          top: 24,
+          right: 14,
+          bottom: 24,
+        );
+      case TextFormFieldPadding.PaddingT66:
+        return getPadding(
+          left: 15,
+          top: 66,
+          right: 15,
+          bottom: 66,
         );
       default:
         return getPadding(
           left: 8,
-          top: 11,
+          top: 10,
           right: 8,
-          bottom: 11,
+          bottom: 10,
         );
     }
   }
 }
 
 enum TextFormFieldShape {
-  RoundedBorder15,
   RoundedBorder10,
-  RoundedBorder20,
+  RoundedBorder15,
 }
 
 enum TextFormFieldPadding {
-  PaddingT11,
-  PaddingT180,
+  PaddingT10,
+  PaddingT24,
+  PaddingT66,
 }
 
 enum TextFormFieldVariant {
   None,
-  OutlineBlack9003f,
-  FillBluegray100,
-  OutlineBlack9007f,
+  FillGreen50,
 }
 
 enum TextFormFieldFontStyle {
-  InterRegular16,
-  InterRegular17,
+  InterRegular10,
+  InterBold18,
 }

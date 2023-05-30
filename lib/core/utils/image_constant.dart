@@ -9,10 +9,6 @@ class ImageConstant {
 
   static String imgMusic = 'assets/images/img_music.svg';
 
-  static String imgImage5 = 'assets/images/img_image5.png';
-
-  static String imgShare = 'assets/images/img_share.svg';
-
   static String imgCalendarGray900 = 'assets/images/img_calendar_gray_900.svg';
 
   static String imgClock = 'assets/images/img_clock.svg';
@@ -21,21 +17,15 @@ class ImageConstant {
 
   static String imgGiagiong = 'assets/images/img_giagiong.png';
 
-  static String imgSearchBlack900 = 'assets/images/img_search_black_900.svg';
-
   static String imgRectangle22 = 'assets/images/img_rectangle22.png';
-
-  static String imgSearchGray900 = 'assets/images/img_search_gray_900.svg';
 
   static String imgUser = 'assets/images/img_user.svg';
 
-  static String imgEllipse2 = 'assets/images/img_ellipse2.png';
-
   static String imgForward = 'assets/images/img_forward.svg';
 
-  static String imgEllipse3 = 'assets/images/img_ellipse3.png';
+  static String imgImage8120x137 = 'assets/images/img_image8_120x137.png';
 
-  static String imgAccountcircle = 'assets/images/img_accountcircle.svg';
+  static String imgEllipse3 = 'assets/images/img_ellipse3.png';
 
   static String imgSettings = 'assets/images/img_settings.svg';
 
@@ -43,7 +33,11 @@ class ImageConstant {
 
   static String imgNotification = 'assets/images/img_notification.svg';
 
+  static String imgImage15101x84 = 'assets/images/img_image15_101x84.png';
+
   static String imgImage15 = 'assets/images/img_image15.png';
+
+  static String imgImage20 = 'assets/images/img_image20.png';
 
   static String imgSave = 'assets/images/img_save.svg';
 
@@ -55,11 +49,15 @@ class ImageConstant {
 
   static String imgImage1 = 'assets/images/img_image1.png';
 
+  static String imgEdit = 'assets/images/img_edit.svg';
+
   static String imgRectangle23 = 'assets/images/img_rectangle23.png';
 
   static String imgTracuu = 'assets/images/img_tracuu.png';
 
   static String imgImage9 = 'assets/images/img_image9.png';
+
+  static String imgEye = 'assets/images/img_eye.svg';
 
   static String imgCalendar = 'assets/images/img_calendar.svg';
 
@@ -69,9 +67,6 @@ class ImageConstant {
 
   static String imgHome = 'assets/images/img_home.svg';
 
-  static String imgImage887x100 = 'assets/images/img_image8_87x100.png';
-
-  static String imgImage19 = 'assets/images/img_image19.png';
-
   static String imageNotFound = 'assets/images/image_not_found.png';
+  static String img4 = 'assets/images/img4.jpg';
 }
